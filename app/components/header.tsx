@@ -28,8 +28,17 @@ export default function Header() {
         sm:w-[initial] sm:flex-nowrap sm:gap-5"
         >
           {links.map((link) => {
-            <li key={link.hash}>
-              <Link href={link.hash}>{link.name}</Link>
+            <li
+              className="h-3/4 flex items-center justify-center"
+              key={link.hash}
+            >
+              <Link
+                className="flex w-full items-center justify-center px-3 py-3
+              hover:text-sky-950 transition"
+                href={link.hash}
+              >
+                {link.name}
+              </Link>
             </li>;
           })}
         </ul>
