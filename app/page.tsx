@@ -1,5 +1,6 @@
 import Header from "./components/header";
 import Navbar from "./components/navbar";
+import About from "./components/about";
 
 export default function Home() {
   return (
@@ -8,6 +9,7 @@ export default function Home() {
 
       <div className="container mt-24 mx-auto">
         <Header />
+        <About />
       </div>
     </main>
   );

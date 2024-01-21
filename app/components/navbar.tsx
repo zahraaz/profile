@@ -33,7 +33,8 @@ const navLinks = [
 export default function Navbar() {
   const [navbarOpen, setNavbarOpen] = useState(false);
   return (
-    <nav className="fixed top-0 left-0 right-0 z-10 bg-opacity-90 ">
+    // <nav className="fixed top-0 left-0 right-0 z-10 bg-[##fae8ff] bg-opacity-100">
+    <nav className="fixed mx-auto border top-0 left-0 right-0 z-10 bg-opacity-100">
       <div className="flex flex-wrap items-center justify-between mx-auto p-8">
         <Link href="/">
           <Image
@@ -50,7 +51,7 @@ export default function Navbar() {
           {!navbarOpen ? (
             <button
               id="nav-toggle"
-              className="flex items-center px-3 py-2 border rounded hover:text-white hover:border-white"
+              className="flex items-center px-3 py-2 border rounded text-sky-900 border-sky-900 hover:text-white hover:border-white"
               onClick={() => setNavbarOpen(true)}
             >
               <Bars3Icon className="h-5 w-5" />
@@ -58,7 +59,7 @@ export default function Navbar() {
           ) : (
             <button
               id="nav-toggle"
-              className="flex items-center px-3 py-2 border rounded hover:text-white hover:border-white"
+              className="flex items-center px-3 py-2 border rounded text-sky-900 border-ky-900 hover:text-white hover:border-white"
               onClick={() => setNavbarOpen(false)}
             >
               <XMarkIcon className="h-5 w-5" />
@@ -66,36 +67,19 @@ export default function Navbar() {
           )}
         </div>
 
-        <div className="menu hidden md:block md:w-auto" id="navbar">
-          <ul className="font-medium flex p-4 md:p-0  rounded-lg flex-row md:space-x-8 mt-0">
-            <li>
-              {" "}
-              <Link
-                href="#about"
-                className="block py-2 pl-3 pr-4 text-sky-900 sm:text-xl rounded md:p-0 hover:text-white"
-              >
-                About
-              </Link>
-            </li>
-            <li>
-              <Link
-                href="#projects"
-                className="block py-2 pl-3 pr-4 text-sky-900 sm:text-xl rounded md:p-0 hover:text-white"
-              >
-                Projects
-              </Link>
-            </li>
-            <li>
-              <Link
-                href="#contact"
-                className="block py-2 pl-3 pr-4 text-sky-900 sm:text-xl rounded md:p-0 hover:text-white"
-              >
-                Contact
-              </Link>
-            </li>
+        <div className="hidden md:block md:w-auto" id="navbar-default">
+          <ul className="font-medium text-lg flex p-4 md:p-0  rounded-lg flex-row md:space-x-8 mt-0">
+            {navLinks.map((link) => {
+              return (
+                <li key={link.title}>
+                  <NavLink title={link.title} href={link.path} />
+                </li>
+              );
+            })}
           </ul>
         </div>
       </div>
+      {navbarOpen ? <MenuOverlay links={navLinks} /> : null}
     </nav>
   );
 }
