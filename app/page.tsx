@@ -1,9 +1,9 @@
-import { Button } from "@chakra-ui/react";
+import Header from "./components/header";
 
 export default function Home() {
   return (
-    <>
-      <Button>Click me!</Button>
-    </>
+    <main className="flex min-h-screen flex-col container mx-auto py-4 px-12">
+      <Header />
+    </main>
   );
 }
