@@ -1,4 +1,4 @@
-// "use client";
+"use client";
 
 // import { motion } from "framer-motion";
 // import Link from "next/link";
@@ -49,11 +49,15 @@
 //   );
 // }
 
+import Image from "next/image";
+
+import worker from "../public/worker.png";
+
 export default function Header() {
   return (
     <section>
       <div className="grid grid-cols-1 lg:grid-cols-12">
-        <div className="col-span-7">
+        <div className="col-span-7 place-self-center">
           <h1 className="text-sky-950 mb-4 text-4xl lg:text-6xl font-extrabold">
             Zahraa Mahmood
           </h1>
@@ -74,6 +78,16 @@ export default function Header() {
               <a>Send me a message</a>
             </p>
           </p>
+        </div>
+        <div className="col-span-5">
+          <Image
+            src={worker}
+            alt="personal image"
+            quality={100}
+            width={300}
+            height={300}
+          />
+          here
         </div>
       </div>
     </section>
