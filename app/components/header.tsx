@@ -61,12 +61,12 @@ export default function Header() {
           <h1 className="text-sky-950 mb-4 text-4xl lg:text-6xl font-extrabold">
             Zahraa Mahmood
           </h1>
-          <h4 className="text-sky-950 mb-4 text-xl lg:text-2xl font-extrabold">
+          <h4 className="text-rose-800 mb-4 text-xl lg:text-2xl font-extrabold">
             Full Stack Web Developer{" "}
           </h4>
           <p className="text-lg lg:text-xl mb-6">
             <p>
-              Hello, I’m Zahraa! Welcome to my digital playground. I am
+              Hello, I&apos;m Zahraa! Welcome to my digital playground. I&apos;m
               passionate about software development and making change and
               impact, creating technology to elevate people, and building
               community. You can find me writing code, teaching soft skills to
@@ -75,7 +75,7 @@ export default function Header() {
             </p>
             <p>
               Interested in collaborating?
-              <a>Send me a message</a>
+              <a href="/contact-me">Send me a message</a>
             </p>
           </p>
         </div>
