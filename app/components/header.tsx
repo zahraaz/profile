@@ -1,4 +1,4 @@
-"use client";
+// "use client";
 
 // import { motion } from "framer-motion";
 // import Link from "next/link";
@@ -51,7 +51,7 @@
 
 import Image from "next/image";
 
-import worker from "../public/worker.png";
+import worker from "@/public/worker.png";
 
 export default function Header() {
   return (
@@ -62,9 +62,9 @@ export default function Header() {
             Zahraa Mahmood
           </h1>
           <h4 className="text-sky-950 mb-4 text-xl lg:text-2xl font-extrabold">
-            web Developer{" "}
+            Full Stack Web Developer{" "}
           </h4>
-          <p className="text-lg lg:text-xl">
+          <p className="text-lg lg:text-xl mb-6">
             <p>
               Hello, I’m Zahraa! Welcome to my digital playground. I am
               passionate about software development and making change and
@@ -79,15 +79,18 @@ export default function Header() {
             </p>
           </p>
         </div>
-        <div className="col-span-5">
-          <Image
-            src={worker}
-            alt="personal image"
-            quality={100}
-            width={300}
-            height={300}
-          />
-          here
+
+        <div className="col-span-5 place-self-center mt-4 lg:mt-0">
+          <div className="rounded-full w-[250px] h-[250px] lg:w-[400] lg:h-[400px] relative">
+            <Image
+              src={worker}
+              alt="personal image"
+              quality={100}
+              width={300}
+              height={300}
+              className="absolute transform -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2"
+            />
+          </div>
         </div>
       </div>
     </section>
