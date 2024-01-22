@@ -45,9 +45,29 @@ export default function ProjectCard({
             {stack}
           </span> */}
         </div>
-        <div>
-          <button>Demo </button>
-          <button>Source code</button>
+
+        <div className="m-10 grid gap-4 grid-cols-2 text-[#082f49]">
+          <button>
+            <Link
+              href={previewUrl}
+              className=" text-sky-400 bg-rose-100 px-6 
+              inline-block py-3 w-full sm:w-fit 
+              rounded-full mr-4 bg-gradient-to-br 
+              from-primary-500 to-secondary-500 hover:bg-slate-200"
+            >
+              Demo
+            </Link>
+          </button>
+
+          <Link
+            href={gitUrl}
+            className="text-sky-400 bg-rose-100 px-6 
+            inline-block py-3 w-full sm:w-fit 
+            rounded-full mr-4 bg-gradient-to-br 
+            from-primary-500 to-secondary-500 hover:bg-slate-200"
+          >
+            <button> Code</button>
+          </Link>
         </div>
       </div>
     </>

@@ -10,7 +10,7 @@ const projectsData = [
     description:
       "An information system to track children's periodic vaccination schedules, coordinating with parents. Designed for Al-Quds Medical Centre, focusing on organized vaccination scheduling",
     stack: ["ReactJS", "MUI", "NodeJS", "ExpressJS", "MySQL", "TypeORM"],
-    gitUrl: "/",
+    gitUrl: "https://github.com/zahraaz/Child_Vaccination_project",
     previewUrl: "/",
   },
   {
@@ -26,8 +26,8 @@ const projectsData = [
       "Headless UI",
       "Farmer Motion",
     ],
-    gitUrl: "/",
-    previewUrl: "/",
+    gitUrl: "https://github.com/ReCoded-Org/capstone-IQLBPS-Dilmun",
+    previewUrl: "https://capstone-dilmun.netlify.app/",
   },
   {
     id: 3,
@@ -45,7 +45,7 @@ const projectsData = [
       "MySQL",
       "TypeORM",
     ],
-    gitUrl: "/",
+    gitUrl: "https://github.com/zahraaz/newStar_fashion",
     previewUrl: "/",
   },
 ];
