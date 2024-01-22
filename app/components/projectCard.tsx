@@ -36,15 +36,15 @@ export default function ProjectCard({
       <div className="text-rose-800 rounded-b-xl mt-3 py-6 px-4">
         <h5 className="text-xl font-semibold mb-2">{title}</h5>
         <p className="text-[#082f49]">{description}</p>
-        {/* <div>
-          <span
+        <div>
+          {/* <span
             className="inline-flex items-center rounded-md 
         bg-green-50 px-2 py-1 text-xs font-medium text-green-700 
         ring-1 ring-inset ring-green-600/20"
           >
             {stack}
-          </span>
-        </div> */}
+          </span> */}
+        </div>
         <div>
           <button>Demo </button>
           <button>Source code</button>

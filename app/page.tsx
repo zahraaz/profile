@@ -2,7 +2,7 @@ import Header from "./components/header";
 import Navbar from "./components/navbar";
 import About from "./components/about";
 import Projects from "./components/projects";
-import ContactMe from "./components/contact-me";
+import Contact from "./components/contact";
 import Footer from "./components/footer";
 
 export default function Home() {
@@ -14,7 +14,7 @@ export default function Home() {
         <Header />
         <About />
         <Projects />
-        <ContactMe />
+        <Contact />
         <Footer />
       </div>
     </main>
