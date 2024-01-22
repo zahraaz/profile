@@ -53,21 +53,22 @@ export default function ProjectCard({
               className=" text-sky-400 bg-rose-100 px-6 
               inline-block py-3 w-full sm:w-fit 
               rounded-full mr-4 bg-gradient-to-br 
-              from-primary-500 to-secondary-500 hover:bg-slate-200"
+              from-primary-500 to-secondary-500 hover:bg-slate-200 justify-center"
             >
               Demo
             </Link>
           </button>
-
-          <Link
-            href={gitUrl}
-            className="text-sky-400 bg-rose-100 px-6 
+          <button>
+            <Link
+              href={gitUrl}
+              className="text-sky-400 bg-rose-100 px-6 
             inline-block py-3 w-full sm:w-fit 
             rounded-full mr-4 bg-gradient-to-br 
-            from-primary-500 to-secondary-500 hover:bg-slate-200"
-          >
-            <button> Code</button>
-          </Link>
+            from-primary-500 to-secondary-500 hover:bg-slate-200 justify-center"
+            >
+              Code
+            </Link>
+          </button>
         </div>
       </div>
     </>
