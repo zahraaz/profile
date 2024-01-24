@@ -32,7 +32,6 @@ export default function RootLayout({
          lg:left-[-28rem]
          xl:left-[-20rem]
         2xl:left-[-5rem]
-         
          "
         ></div>
         {children}
