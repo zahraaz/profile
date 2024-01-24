@@ -44,7 +44,7 @@ export default function Contact() {
                 type="text"
                 id="fullname"
                 required
-                className="bg-pink-50 border border-[#33353F] placeholder-[#9CA2A9] text-gray-100 text-sm rounded-lg block w-full p-2.5"
+                className="bg-pink-50 border border-[#33353F] placeholder-[#9CA2A9 text-sm rounded-lg block w-full p-2.5"
                 placeholder=""
               />
             </div>
@@ -68,14 +68,15 @@ export default function Contact() {
             <div className="mb-6">
               <label
                 htmlFor="message"
-                className="text-sky-950 block text-sm mb-2 font-medium"
+                className="text-sky-950 block mb-2 font-medium"
               >
                 Message
               </label>
               <textarea
                 name="message"
                 id="message"
-                className="h-52 bg-pink-50  border border-[#33353F] placeholder-[#9CA2A9] text-gray-100 text-sm rounded-lg block w-full p-2.5"
+                className="h-50 bg-pink-50  border border-[#33353F] placeholder-[#9CA2A9]
+                 text-sm rounded-lg block w-full p-2.5"
                 placeholder=""
                 required
                 maxLength={5000}

@@ -9,7 +9,7 @@ const NavLink = ({ href, title }: NavLink) => {
   return (
     <Link
       href={href}
-      className="block py-2 pl-3 pr-4 sm:text-xl rounded md:bg-transparent  md:p-0 hover:text-white "
+      className="block py-2 pl-3 pr-4 sm:text-xl rounded md:bg-transparent  md:p-0"
       aria-current="page"
     >
       {title}

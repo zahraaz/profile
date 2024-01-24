@@ -8,7 +8,7 @@ export default function Header() {
     <section>
       <div className="grid grid-cols-1 lg:grid-cols-12">
         <div className="col-span-7 place-self-center">
-          <h1 className="text-sky-950 mb-4 text-4xl lg:text-6xl font-extrabold">
+          <h1 className="text-sky-950 mb-4 text-4xl lg:text-6xl font-extrabold ">
             Zahraa Mahmood
           </h1>
           <h4 className="text-rose-800 mb-4 text-xl lg:text-2xl font-extrabold">
