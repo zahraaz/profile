@@ -33,13 +33,16 @@ export default function ProjectCard({
           {description}
         </p>
         <div>
-          {/* <span
-            className="inline-flex items-center rounded-md
-        bg-green-50 px-2 py-1 text-xs font-medium text-green-700
-        ring-1 ring-inset ring-green-600/20"
-          >
-            {stack}
-          </span> */}
+          <ul className="flex flex-wrap mt-4 gap-2 sm:mt-auto">
+            {stack.map((tag, index) => (
+              <li
+                className="bg-black/[0.7] px-3 py-1 text-[0.7rem] uppercase tracking-wider text-white rounded-full dark:text-white/70"
+                key={index}
+              >
+                {tag}
+              </li>
+            ))}
+          </ul>
         </div>
 
         <div className="m-10 grid gap-4 grid-cols-2 text-[#082f49]">
