@@ -1,6 +1,6 @@
 "use client";
 import Link from "next/link";
-import { Facebook, Instagram, GitHub, Linkedin } from "react-feather";
+import { Facebook, Instagram, GitHub, Linkedin, Heart } from "react-feather";
 
 export default function Footer() {
   return (
@@ -24,7 +24,8 @@ export default function Footer() {
       </small>
       <p className="text-xs">
         <span className="font-semibold">About this website:</span>
-        Made with ❤️ & verious tech in Mosul, Iraq &copy; Zahraa Mahmood 2024
+        Made with <Heart className="inline size-4" /> & verious tech in Mosul,
+        Iraq &copy; Zahraa Mahmood 2024
       </p>
     </footer>
   );
