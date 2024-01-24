@@ -4,7 +4,7 @@ import { useState } from "react";
 
 import Link from "next/link";
 import Image from "next/image";
-import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/solid";
+import { Menu, X } from "react-feather";
 
 import photo from "@/public/photo.jpg";
 
@@ -50,19 +50,21 @@ export default function Navbar() {
         <div className="block md:hidden">
           {!navbarOpen ? (
             <button
-              id="nav-toggle"
+              title="menu"
+              id="nav-toggle-open"
               className="flex items-center px-3 py-2 border rounded text-sky-900 border-sky-900 hover:text-white hover:border-white"
               onClick={() => setNavbarOpen(true)}
             >
-              <Bars3Icon className="h-5 w-5" />
+              <Menu className="h-5 w-5" />
             </button>
           ) : (
             <button
-              id="nav-toggle"
+              title="x"
+              id="nav-toggle-x"
               className="flex items-center px-3 py-2 border rounded text-sky-900 border-ky-900 hover:text-white hover:border-white"
               onClick={() => setNavbarOpen(false)}
             >
-              <XMarkIcon className="h-5 w-5" />
+              <X className="h-5 w-5" />
             </button>
           )}
         </div>
