@@ -50,7 +50,7 @@ export default function ProjectCard({
           <button>
             <Link
               href={previewUrl}
-              className=" text-sky-400 bg-rose-100 px-6 
+              className=" text-sky-950 bg-rose-300  px-6 
               inline-block py-3 w-full sm:w-fit 
               rounded-full mr-4 bg-gradient-to-br 
               from-primary-500 to-secondary-500 hover:bg-slate-200 justify-center"
@@ -61,7 +61,7 @@ export default function ProjectCard({
           <button>
             <Link
               href={gitUrl}
-              className="text-sky-400 bg-rose-100 px-6 
+              className="text-sky-950 bg-rose-300  px-6 
             inline-block py-3 w-full sm:w-fit 
             rounded-full mr-4 bg-gradient-to-br 
             from-primary-500 to-secondary-500 hover:bg-slate-200 justify-center"
