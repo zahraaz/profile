@@ -11,10 +11,16 @@ export default function Header() {
       dark:bg-gray-900 dark:text-gray-50 dark:text-opacity-90"
       >
         <div className="col-span-7 place-self-center">
-          <h1 className="text-sky-950 mb-4 text-4xl lg:text-6xl font-extrabold ">
+          <h1
+            className="text-sky-950 mb-4 text-4xl lg:text-6xl font-extrabold
+          dark:text-sky-300 dark:text-opacity-90 "
+          >
             Zahraa Mahmood
           </h1>
-          <h4 className="text-rose-800 mb-4 text-xl lg:text-2xl font-extrabold">
+          <h4
+            className="text-rose-800 mb-4 text-xl lg:text-2xl font-extrabold
+          dark:text-rose-200 dark:text-opacity-90"
+          >
             Full Stack Web Developer{" "}
           </h4>
           <p className="text-lg lg:text-xl mb-6">

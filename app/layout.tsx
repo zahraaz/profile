@@ -2,7 +2,8 @@ import "./globals.css";
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 
-// import ThemeContextProvider from "./context/theme-context";
+import ThemeContextProvider from "./context/theme-context";
+import ThemeSwitch from "./components/theme-switch";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -24,22 +25,30 @@ export default function RootLayout({
       
       `}
       >
-        {/* <ThemeContextProvider> */}
-        <div className="bg-sky-100 absolute top-[-6rem] -z-10 right-[11rem] h-[31.25rem] w-[31.25rem] rounded-full blur-[10rem] sm:w-[68.75rem]"></div>
+        <ThemeContextProvider>
+          <div
+            className="bg-sky-100 absolute top-[-6rem] -z-10 right-[11rem] h-[31.25rem] 
+          w-[31.25rem] rounded-full blur-[10rem] 
+          sm:w-[68.75rem]
+          dark:bg-gray-900 dark:text-gray-50 dark:text-opacity-90"
+          ></div>
 
-        <div
-          className="
-        bg-rose-100 absolute top-[-1rem] -z-10 left-[-35rem] h-[31.25rem] w-[50rem] rounded-full blur-[10rem]
+          <div
+            className="
+        bg-rose-100 absolute top-[-1rem] -z-10 left-[-35rem] h-[31.25rem] 
+        w-[50rem] rounded-full blur-[10rem]
          sm:w-[68.75rem]
          md:left-[-33rem]
          lg:left-[-28rem]
          xl:left-[-20rem]
         2xl:left-[-5rem]
+        dark:bg-gray-900 dark:text-gray-50 dark:text-opacity-90
          "
-        ></div>
+          ></div>
+          <ThemeSwitch />
 
-        {children}
-        {/* </ThemeContextProvider> */}
+          {children}
+        </ThemeContextProvider>
       </body>
     </html>
   );

@@ -2,9 +2,8 @@ import Header from "./components/header";
 import Navbar from "./components/navbar";
 import About from "./components/about";
 import Projects from "./components/projects";
-// import Contact from "./components/contact";
+import Contact from "./components/contact";
 import Footer from "./components/footer";
-// import ThemeSwitch from "./components/theme-switch";
 
 export default function Home() {
   return (
@@ -14,9 +13,8 @@ export default function Home() {
         <Header />
         <About />
         <Projects />
-        {/* <Contact /> */}
+        <Contact />
         <Footer />
-        {/* <ThemeSwitch /> */}
       </div>
     </main>
   );

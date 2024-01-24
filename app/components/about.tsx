@@ -20,8 +20,16 @@ export default function About() {
           priority={true}
         />
         <div className=" mt-4 md:mt-0 text-left flex flex-col h-full justify-center">
-          <h2 className="text-4xl font-bold text-sky-950 mb-4">About Me</h2>
-          <p className="text-sky-950 lg:text-lg">
+          <h2
+            className="text-4xl font-bold text-sky-950 mb-4
+          dark:text-sky-300 dark:text-opacity-90 "
+          >
+            About Me
+          </h2>
+          <p
+            className="text-sky-950 lg:text-lg
+          dark:text-sky-50 dark:text-opacity-90 "
+          >
             Starting from the first line of code “Hello World” that I wrote in
             C, going toward building a 2D game in Python using Pygame. I was
             passionate enough to get a computer engineering degree. And starting
