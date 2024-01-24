@@ -1,13 +1,21 @@
 import { CodeBracketIcon, EyeIcon } from "@heroicons/react/24/outline";
 import Link from "next/link";
 
+type ProjectCard = {
+  title: string;
+  description: string;
+  stack: Array<string>;
+  gitUrl: string;
+  previewUrl: string;
+};
+
 export default function ProjectCard({
   title,
   description,
   stack,
   gitUrl,
   previewUrl,
-}) {
+}: ProjectCard) {
   return (
     <>
       <div>

@@ -77,6 +77,7 @@ export default function Projects() {
               key={project.id}
               title={project.title}
               description={project.description}
+              stack={project.stack}
               gitUrl={project.gitUrl}
               previewUrl={project.previewUrl}
             />

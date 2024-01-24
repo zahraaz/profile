@@ -70,7 +70,7 @@ export default function Navbar() {
         </div>
 
         <div className="hidden md:block md:w-auto" id="navbar-default">
-          <ul className="font-medium text-lg flex p-4 md:p-0  rounded-lg flex-row md:space-x-8 mt-0">
+          <ul className="font-medium text-lg flex p-4 md:p-0 rounded-lg flex-row md:space-x-8 mt-0">
             {navLinks.map((link) => {
               return (
                 <li key={link.title}>
@@ -81,7 +81,7 @@ export default function Navbar() {
           </ul>
         </div>
       </div>
-      {navbarOpen ? <MenuOverlay links={navLinks} /> : null}
+      {navbarOpen ? <MenuOverlay className="block" links={navLinks} /> : null}
     </nav>
   );
 }
