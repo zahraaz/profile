@@ -1,9 +1,10 @@
+"use client";
 import Link from "next/link";
 import Image from "next/image";
 
 import photo from "@/public/photo.jpg";
 
-export default function image() {
+export default function PersonalImage() {
   return (
     <Link href="/">
       <Image

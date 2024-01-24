@@ -17,7 +17,6 @@ export default function Navbar() {
     >
       <div className="flex flex-wrap items-center justify-between mx-auto p-3">
         <PersonalImage />
-
         <div className="block md:hidden">
           {!navbarOpen ? (
             <button

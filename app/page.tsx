@@ -1,4 +1,4 @@
-// import Header from "./components/header";
+import Header from "./components/header";
 import Navbar from "./components/navbar";
 import About from "./components/about";
 import Projects from "./components/projects";
@@ -11,7 +11,7 @@ export default function Home() {
     <main className="flex min-h-screen flex-col container mx-auto py-4 px-12">
       <Navbar />
       <div className="container mt-24 mx-auto">
-        {/* <Header /> */}
+        <Header />
         <About />
         <Projects />
         {/* <Contact /> */}

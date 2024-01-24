@@ -37,6 +37,7 @@ export default function RootLayout({
         2xl:left-[-5rem]
          "
         ></div>
+
         {children}
         {/* </ThemeContextProvider> */}
       </body>
