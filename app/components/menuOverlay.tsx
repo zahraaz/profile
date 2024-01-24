@@ -10,6 +10,7 @@ type Link = {
   title: string;
   path: string;
 };
+
 type Index = number;
 
 const MenuOverlay = ({ links }: overlayProps) => {
