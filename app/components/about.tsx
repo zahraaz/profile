@@ -2,14 +2,23 @@
 
 import Image from "next/image";
 import Link from "next/link";
-
 import work from "@/public/work.gif";
 
 export default function About() {
   return (
-    <section className="text-white" id="about">
+    <section
+      className="text-white dark:bg-gray-900 dark:text-gray-50 dark:text-opacity-90"
+      id="about"
+    >
       <div className="md:grid md:grid-cols-2 gap-8 items-center py-8 px-4 xl:gap-16 sm:py-16 xl:px-16">
-        <Image src={work} width={500} height={500} alt="laptop" />
+        <Image
+          src={work}
+          width={500}
+          height={500}
+          quality={100}
+          alt="laptop"
+          priority={true}
+        />
         <div className=" mt-4 md:mt-0 text-left flex flex-col h-full justify-center">
           <h2 className="text-4xl font-bold text-sky-950 mb-4">About Me</h2>
           <p className="text-sky-950 lg:text-lg">

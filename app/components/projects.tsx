@@ -1,5 +1,5 @@
 "use client";
-import { useState, useRef } from "react";
+import { useRef } from "react";
 import ProjectCard from "./projectCard";
 import { motion, useInView } from "framer-motion";
 
@@ -61,10 +61,17 @@ export default function Projects() {
 
   return (
     <section id="projects">
-      <h2 className="text-center text-4xl font-bold text-sky-950 mt-4 mb-8 md:mb-12">
+      <h2
+        className="text-center text-4xl font-bold text-sky-950 mt-4 mb-8 md:mb-12
+      dark:bg-gray-900 dark:text-gray-50 dark:text-opacity-90"
+      >
         My Projects
       </h2>
-      <ul ref={ref} className="grid md:grid-cols-3 gap-8 md:gap-12">
+      <ul
+        ref={ref}
+        className="grid md:grid-cols-3 gap-8 md:gap-12
+      dark:bg-gray-900 dark:text-gray-50 dark:text-opacity-90"
+      >
         {projectsData.map((project, index) => (
           <motion.li
             key={index}

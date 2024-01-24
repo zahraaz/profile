@@ -1,9 +1,13 @@
+"use client";
 import Link from "next/link";
 import { Facebook, Instagram, GitHub, Linkedin } from "react-feather";
 
 export default function Footer() {
   return (
-    <footer className="m-0 px-4 text-center text-gray-500">
+    <footer
+      className="m-0 px-4 text-center text-gray-500
+    dark:bg-gray-900 dark:text-gray-50 dark:text-opacity-90"
+    >
       <small className=" m-0 flex justify-center">
         <Link href="https://github.com/zahraaz">
           <GitHub />

@@ -2,7 +2,7 @@ import "./globals.css";
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 
-import ThemeContextProvider from "./context/theme-context";
+// import ThemeContextProvider from "./context/theme-context";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -24,11 +24,11 @@ export default function RootLayout({
       
       `}
       >
-        <ThemeContextProvider>
-          <div className="bg-sky-100 absolute top-[-6rem] -z-10 right-[11rem] h-[31.25rem] w-[31.25rem] rounded-full blur-[10rem] sm:w-[68.75rem]"></div>
+        {/* <ThemeContextProvider> */}
+        <div className="bg-sky-100 absolute top-[-6rem] -z-10 right-[11rem] h-[31.25rem] w-[31.25rem] rounded-full blur-[10rem] sm:w-[68.75rem]"></div>
 
-          <div
-            className="
+        <div
+          className="
         bg-rose-100 absolute top-[-1rem] -z-10 left-[-35rem] h-[31.25rem] w-[50rem] rounded-full blur-[10rem]
          sm:w-[68.75rem]
          md:left-[-33rem]
@@ -36,9 +36,9 @@ export default function RootLayout({
          xl:left-[-20rem]
         2xl:left-[-5rem]
          "
-          ></div>
-          {children}
-        </ThemeContextProvider>
+        ></div>
+        {children}
+        {/* </ThemeContextProvider> */}
       </body>
     </html>
   );
