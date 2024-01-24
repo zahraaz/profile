@@ -59,17 +59,15 @@ export default function ProjectCard({
         </div>
 
         <div className="m-10 grid gap-4 grid-cols-2 text-[#082f49]">
-          <button>
-            <Link
-              href={previewUrl}
-              className=" text-sky-950 bg-rose-300  px-6
+          <Link
+            href={previewUrl}
+            className=" text-sky-950 bg-rose-300  px-6
               inline-block py-3 w-full sm:w-fit
               rounded-full mr-4 bg-gradient-to-br
               from-primary-500 to-secondary-500 hover:bg-slate-200 justify-center"
-            >
-              Demo
-            </Link>
-          </button>
+          >
+            Demo
+          </Link>
           <button>
             <Link
               href={gitUrl}
