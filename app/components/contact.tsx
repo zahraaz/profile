@@ -1,9 +1,32 @@
 "use client";
-import { useState } from "react";
+import { useState, useRef } from "react";
+import emailjs from "@emailjs/browser";
 import { Send } from "react-feather";
 
 export default function Contact() {
   const [emailSubmitted, setEmailSubmitted] = useState(false);
+
+  const form = useRef();
+
+  const sendEmail = (e: any) => {
+    e.preventDefault();
+
+    emailjs
+      .sendForm(
+        "service_39mc7e8",
+        "template_cty1wde",
+        form.current as any,
+        "hRsL8KNftUx0BnB8K"
+      )
+      .then(
+        (result) => {
+          console.log(result.text);
+        },
+        (error) => {
+          console.log(error.text);
+        }
+      );
+  };
 
   return (
     <section
@@ -39,38 +62,46 @@ export default function Contact() {
             Email sent successfully!
           </p>
         ) : (
-          <form className="flex flex-col">
+          <form
+            className="flex flex-col"
+            ref={form as any}
+            onSubmit={sendEmail}
+          >
             <div className="mb-6">
               <label
-                htmlFor="fullname"
+                htmlFor="user_name"
                 className="text-sky-950 block text-sm mb-2 font-medium
-                dark:text-sky-50 dark:text-opacity-90"
+                dark:text-sky-50"
               >
                 Full Name
               </label>
               <input
-                name="fullname"
+                name="user_name"
                 type="text"
-                id="fullname"
+                id="user_name"
                 required
-                className="bg-pink-50 border border-[#33353F] placeholder-[#9CA2A9 text-sm rounded-lg block w-full p-2.5"
+                className="bg-pink-50 border border-[#33353F] 
+                text-sky-950
+                placeholder-[#9CA2A9 text-sm rounded-lg block w-full p-2.5"
                 placeholder=""
               />
             </div>
             <div className="mb-6">
               <label
-                htmlFor="email"
+                htmlFor="user_email"
                 className="text-sky-950 block mb-2 text-sm font-medium
                 dark:text-sky-50 dark:text-opacity-90"
               >
                 Your Email
               </label>
               <input
-                name="email"
+                name="user_email"
                 type="email"
-                id="email"
+                id="user_email"
                 required
-                className="bg-pink-50  border border-[#33353F] text-sm rounded-lg block w-full p-2.5"
+                className="bg-pink-50  border border-[#33353F] 
+                text-sky-950
+                text-sm rounded-lg block w-full p-2.5"
                 placeholder=""
                 maxLength={500}
               />
@@ -86,7 +117,8 @@ export default function Contact() {
               <textarea
                 name="message"
                 id="message"
-                className="h-50 bg-pink-50  border border-[#33353F] placeholder-[#9CA2A9]
+                className="h-50 bg-pink-50  border border-[#33353F]
+                text-sky-950 placeholder-[#9CA2A9]
                  text-sm rounded-lg block w-full p-2.5"
                 placeholder=""
                 required
@@ -98,6 +130,7 @@ export default function Contact() {
               className="bg-rose-300 hover:bg-primary-600 text-black font-medium 
               py-2.5 px-5 rounded-lg w-full
               dark:text-sky-50 dark:text-opacity-90"
+              value="send"
             >
               Send
               <Send className="inline m-1" />
