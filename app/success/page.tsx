@@ -1,15 +1,17 @@
 "use client";
-import Header from "../components/header";
+import NavBar from "../components/navbar";
 import Footer from "../components/footer";
 
 export default function AfterSubmission() {
   return (
     <div>
-      <Header />
+      <NavBar />
       <main className="text-center">
         <h2 className="text-primary">Loading...</h2>
         <p>Thank you for conacting with me :)</p>
-        <div> Go back to the home page</div>
+        <div className="text-lg font-semibold">
+          <a href="/">Go back to the home page </a>{" "}
+        </div>
       </main>
       <Footer />
     </div>
