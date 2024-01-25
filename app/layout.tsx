@@ -2,6 +2,7 @@ import "./globals.css";
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import { Toaster } from "sonner";
+import Head from "next/head";
 
 import ThemeContextProvider from "./context/theme-context";
 import ThemeSwitch from "./components/theme-switch";
@@ -20,12 +21,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body
-        className={`${inter.className} bg-sky-50 text-sky-950
-      dark:bg-gray-900 dark:text-gray-50 dark:text-opacity-90
-      
-      `}
-      >
+      <Head>
         <script
           async
           src={`https://www.googletagmanager.com/gtag/js?id=${process.env.Next_public_google_analytics}`}
@@ -42,6 +38,13 @@ export default function RootLayout({
   `,
           }}
         />
+      </Head>
+      <body
+        className={`${inter.className} bg-sky-50 text-sky-950
+      dark:bg-gray-900 dark:text-gray-50 dark:text-opacity-90
+      
+      `}
+      >
         <ThemeContextProvider>
           <div
             className="bg-sky-100 absolute top-[-6rem] -z-10 right-[11rem] h-[31.25rem] 
