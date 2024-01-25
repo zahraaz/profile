@@ -28,6 +28,7 @@ export default function Contact() {
       )
       .then(
         (result) => {
+          console.log("result");
           console.log(result.text);
           toast.success("Email sent successfully!");
           router.refresh();
