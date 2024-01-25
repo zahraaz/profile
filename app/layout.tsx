@@ -26,6 +26,22 @@ export default function RootLayout({
       
       `}
       >
+        <script
+          async
+          src={`https://www.googletagmanager.com/gtag/js?id=${process.env.Next_public_google_analytics}`}
+        />
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', '${process.env.Next_public_google_analytics}'),{
+    page_path: window.location.pathname,
+  });
+  `,
+          }}
+        />
         <ThemeContextProvider>
           <div
             className="bg-sky-100 absolute top-[-6rem] -z-10 right-[11rem] h-[31.25rem] 
