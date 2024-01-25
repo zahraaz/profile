@@ -15,6 +15,8 @@
 - React Feather: For a visually appealing touch, I utilized React Feather icons to enhance the overall design.
 - Sonner: Handling notifications is crucial, and I incorporated Sonner to manage notifications seamlessly.
 - Framer Motion: Adding a touch of animation, I included Framer Motion to create dynamic and engaging user interfaces.
+- Vercel: For deployment and hosting, I utilized Vercel because it's free (very honest opinion lol).
+- Google Analytics: To gain insights into website traffic and user behaviour, I integrated Google Analytics into this project.
 
 ### Inspiration and Resources
 <p>
