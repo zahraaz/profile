@@ -1,6 +1,7 @@
 import "./globals.css";
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
+import { Toaster } from "sonner";
 
 import ThemeContextProvider from "./context/theme-context";
 import ThemeSwitch from "./components/theme-switch";
@@ -48,6 +49,7 @@ export default function RootLayout({
           <ThemeSwitch />
 
           {children}
+          <Toaster richColors position="bottom-right" />
         </ThemeContextProvider>
       </body>
     </html>

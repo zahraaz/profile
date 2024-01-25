@@ -1,15 +1,23 @@
 "use client";
 import { useState, useRef } from "react";
 import emailjs from "@emailjs/browser";
-import { Send } from "react-feather";
+import { Send, Loader } from "react-feather";
+import { toast } from "sonner";
+import { useRouter } from "next/navigation";
 
 export default function Contact() {
-  const [emailSubmitted, setEmailSubmitted] = useState(false);
+  const router = useRouter();
+
+  const [isLoading, setIsLoading] = useState(false);
+  const [name, setName] = useState("");
+  const [email, setEmail] = useState("");
+  const [message, setMessage] = useState("");
 
   const form = useRef();
 
   const sendEmail = (e: any) => {
     e.preventDefault();
+    setIsLoading(true);
 
     emailjs
       .sendForm(
@@ -21,9 +29,13 @@ export default function Contact() {
       .then(
         (result) => {
           console.log(result.text);
+          toast.success("Email sent successfully!");
+          router.refresh();
+          router.push("/success");
         },
         (error) => {
           console.log(error.text);
+          toast.error("An error ocuuered please try again later!");
         }
       );
   };
@@ -57,86 +69,95 @@ export default function Contact() {
         </p>
       </div>
       <div>
-        {emailSubmitted ? (
-          <p className="text-green-500 text-sm mt-2">
-            Email sent successfully!
-          </p>
-        ) : (
-          <form
-            className="flex flex-col"
-            ref={form as any}
-            onSubmit={sendEmail}
-          >
-            <div className="mb-6">
-              <label
-                htmlFor="user_name"
-                className="text-sky-950 block text-sm mb-2 font-medium
+        <form className="flex flex-col" ref={form as any} onSubmit={sendEmail}>
+          <div className="mb-6">
+            <label
+              htmlFor="user_name"
+              className="text-sky-950 block text-sm mb-2 font-medium
                 dark:text-sky-50"
-              >
-                Full Name
-              </label>
-              <input
-                name="user_name"
-                type="text"
-                id="user_name"
-                required
-                className="bg-pink-50 border border-[#33353F] 
+            >
+              Full Name
+            </label>
+            <input
+              name="user_name"
+              type="text"
+              id="user_name"
+              required
+              className="bg-pink-50 border border-[#33353F] 
                 text-sky-950
                 placeholder-[#9CA2A9 text-sm rounded-lg block w-full p-2.5"
-                placeholder=""
-              />
-            </div>
-            <div className="mb-6">
-              <label
-                htmlFor="user_email"
-                className="text-sky-950 block mb-2 text-sm font-medium
+              placeholder=""
+              value={name}
+              onChange={(e) => setName(e.target.value)}
+            />
+          </div>
+          <div className="mb-6">
+            <label
+              htmlFor="user_email"
+              className="text-sky-950 block mb-2 text-sm font-medium
                 dark:text-sky-50 dark:text-opacity-90"
-              >
-                Your Email
-              </label>
-              <input
-                name="user_email"
-                type="email"
-                id="user_email"
-                required
-                className="bg-pink-50  border border-[#33353F] 
+            >
+              Your Email
+            </label>
+            <input
+              name="user_email"
+              type="email"
+              id="user_email"
+              required
+              className="bg-pink-50  border border-[#33353F] 
                 text-sky-950
                 text-sm rounded-lg block w-full p-2.5"
-                placeholder=""
-                maxLength={500}
-              />
-            </div>
-            <div className="mb-6">
-              <label
-                htmlFor="message"
-                className="text-sky-950 block mb-2 font-medium
+              placeholder=""
+              maxLength={500}
+              value={email}
+              onChange={(e) => setEmail(e.target.value)}
+            />
+          </div>
+          <div className="mb-6">
+            <label
+              htmlFor="message"
+              className="text-sky-950 block mb-2 font-medium
                 dark:text-sky-50 dark:text-opacity-90"
-              >
-                Message
-              </label>
-              <textarea
-                name="message"
-                id="message"
-                className="h-50 bg-pink-50  border border-[#33353F]
+            >
+              Message
+            </label>
+            <textarea
+              name="message"
+              id="message"
+              className="h-50 bg-pink-50  border border-[#33353F]
                 text-sky-950 placeholder-[#9CA2A9]
                  text-sm rounded-lg block w-full p-2.5"
-                placeholder=""
-                required
-                maxLength={5000}
-              />
-            </div>
-            <button
-              type="submit"
-              className="bg-rose-300 hover:bg-primary-600 text-black font-medium 
+              placeholder=""
+              required
+              maxLength={5000}
+              value={message}
+              onChange={(e) => setMessage(e.target.value)}
+            />
+          </div>
+          <button
+            type="submit"
+            className="bg-rose-300 hover:bg-primary-600 text-black font-medium 
               py-2.5 px-5 rounded-lg w-full
               dark:text-sky-50 dark:text-opacity-90"
-              value="send"
-            >
-              Send
-              <Send className="inline m-1" />
-            </button>
-          </form>
-        )}
+            value="send"
+            disabled={isLoading}
+          >
+            {isLoading && (
+              <span>
+                {" "}
+                <Loader className="inline m-1" />
+                Sending...
+              </span>
+            )}
+            {!isLoading && (
+              <span>
+                {" "}
+                Send
+                <Send className="inline m-1" />{" "}
+              </span>
+            )}
+          </button>
+        </form>
       </div>
     </section>
   );
