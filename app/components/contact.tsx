@@ -79,6 +79,7 @@ export default function Contact() {
             >
               Full Name
             </label>
+
             <input
               name="user_name"
               type="text"
@@ -86,17 +87,18 @@ export default function Contact() {
               required
               className="bg-pink-50 border border-[#33353F] 
                 text-sky-950
-                placeholder-[#9CA2A9 text-sm rounded-lg block w-full p-2.5"
+                placeholder-[#9CA2A9] text-sm rounded-lg block w-full p-2.5"
               placeholder=""
               value={name}
               onChange={(e) => setName(e.target.value)}
             />
           </div>
+
           <div className="mb-6">
             <label
               htmlFor="user_email"
-              className="text-sky-950 block mb-2 text-sm font-medium
-                dark:text-sky-50 dark:text-opacity-90"
+              className="text-sky-950 block text-sm mb-2 font-medium
+              dark:text-sky-50"
             >
               Your Email
             </label>
@@ -107,7 +109,7 @@ export default function Contact() {
               required
               className="bg-pink-50  border border-[#33353F] 
                 text-sky-950
-                text-sm rounded-lg block w-full p-2.5"
+                placeholder-[#9CA2A9] text-sm rounded-lg block w-full p-2.5"
               placeholder=""
               maxLength={500}
               value={email}
@@ -117,15 +119,15 @@ export default function Contact() {
           <div className="mb-6">
             <label
               htmlFor="message"
-              className="text-sky-950 block mb-2 font-medium
-                dark:text-sky-50 dark:text-opacity-90"
+              className="text-sky-950 block text-sm mb-2 font-medium
+              dark:text-sky-50"
             >
               Message
             </label>
             <textarea
               name="message"
               id="message"
-              className="h-50 bg-pink-50  border border-[#33353F]
+              className="h-62 bg-pink-50  border border-[#33353F]
                 text-sky-950 placeholder-[#9CA2A9]
                  text-sm rounded-lg block w-full p-2.5"
               placeholder=""
