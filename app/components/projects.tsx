@@ -33,7 +33,7 @@ const projectsData = [
     id: 3,
     title: "FashionEgo ",
     description:
-      "An e-commerce website for women's clothing designers and customers.Enabled designers to showcase their work, and customers to reserve and order designs",
+      "An e-commerce website for women's clothing designers and customers.Enabled designers to showcase their work, and customers to book and order designs",
     stack: ["ReactJS", "MUI", "NodeJS", "ExpressJS", "MySQL", "TypeORM"],
     gitUrl: "https://github.com/zahraaz/newStar_fashion",
     previewUrl: "/",
