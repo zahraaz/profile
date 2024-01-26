@@ -30,7 +30,7 @@ export default function Header() {
             can find me writing code, teaching soft skills to others as well as
             contributing to projects and being part of the community. Interested
             in collaborating?
-            <a href="/contact-me">Send me a message</a>
+            <a href="/#contact">Send me a message</a>
           </p>
         </div>
 
