@@ -25,12 +25,18 @@ export default function Header() {
           </h4>
           <p className="text-lg lg:text-xl mb-6">
             Hello, I&apos;m Zahraa! Welcome to my digital playground. I&apos;m
-            passionate about software development and making change and impact,
-            creating technology to elevate people, and building community. You
-            can find me writing code, teaching soft skills to others as well as
-            contributing to projects and being part of the community. Interested
-            in collaborating?
-            <a href="/#contact">Send me a message</a>
+            passionate about software development, creating technology to
+            elevate people, and building community. You can find me writing
+            code, teaching soft skills to others as well as contributing to
+            projects. Interested in collaborating?
+            <a
+              href="/#contact"
+              className="font-semibold mx-2 underline decoration-rose-200 decoration-4
+              hover:decoration-rose-400
+               "
+            >
+              Send me a message
+            </a>
           </p>
         </div>
 
