@@ -2,6 +2,7 @@
 
 import Image from "next/image";
 import worker from "@/public/worker.png";
+import Link from "next/link";
 
 export default function Header() {
   return (
@@ -29,14 +30,14 @@ export default function Header() {
             elevate people, and building community. You can find me writing
             code, teaching soft skills to others as well as contributing to
             projects. Interested in collaborating?
-            <a
+            <Link
               href="/#contact"
               className="font-semibold mx-2 underline decoration-rose-200 decoration-4
               hover:decoration-rose-400
                "
             >
               Send me a message
-            </a>
+            </Link>
           </p>
         </div>
 

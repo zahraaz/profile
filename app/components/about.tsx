@@ -35,7 +35,12 @@ export default function About() {
             passionate enough to get a computer engineering degree. And starting
             the journey of managing projects and becoming a Full Stack Web
             Developer. Interested in knowing more about me?
-            <Link href="https://docs.google.com/document/d/1P1klVFnPLiEi4nPPAx69VXji0-ia3IHfUTwBMtvY6Xw/edit?usp=sharing">
+            <Link
+              href="https://docs.google.com/document/d/1P1klVFnPLiEi4nPPAx69VXji0-ia3IHfUTwBMtvY6Xw/edit?usp=sharing
+            "
+              className="font-semibold underline decoration-rose-200 decoration-4
+            hover:decoration-rose-400"
+            >
               {" "}
               See my CV
             </Link>
