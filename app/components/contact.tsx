@@ -87,6 +87,7 @@ export default function Contact() {
               required
               className="bg-pink-50 border border-[#33353F] 
                 text-sky-950
+                dark:bg-sky-950 dark:text-sky-50
                 placeholder-[#9CA2A9] text-sm rounded-lg block w-full p-2.5"
               placeholder=""
               value={name}
@@ -98,7 +99,7 @@ export default function Contact() {
             <label
               htmlFor="user_email"
               className="text-sky-950 block text-sm mb-2 font-medium
-              dark:text-sky-50"
+              dark:text-gray-50"
             >
               Your Email
             </label>
@@ -109,6 +110,7 @@ export default function Contact() {
               required
               className="bg-pink-50  border border-[#33353F] 
                 text-sky-950
+                dark:bg-sky-950 dark:text-sky-50
                 placeholder-[#9CA2A9] text-sm rounded-lg block w-full p-2.5"
               placeholder=""
               maxLength={500}
@@ -129,6 +131,7 @@ export default function Contact() {
               id="message"
               className="h-62 bg-pink-50  border border-[#33353F]
                 text-sky-950 placeholder-[#9CA2A9]
+                dark:bg-sky-950 dark:text-sky-50
                  text-sm rounded-lg block w-full p-2.5"
               placeholder=""
               required
@@ -141,7 +144,7 @@ export default function Contact() {
             type="submit"
             className="bg-rose-300 hover:bg-primary-600 text-black font-medium 
               py-2.5 px-5 rounded-lg w-full
-              dark:text-sky-50 dark:text-opacity-90"
+              dark:text-sky-50 dark:text-opacity-90  dark:bg-sky-700"
             value="send"
             disabled={isLoading}
           >
