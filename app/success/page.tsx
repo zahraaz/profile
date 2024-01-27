@@ -8,7 +8,7 @@ export default function AfterSubmission() {
   return (
     <div>
       <NavBar />
-      <main className="text-center">
+      <main className="text-center dark:bg-[#0E141B] dark:text-gray-50 dark:text-opacity-90">
         <div className=" m-0 flex justify-center">
           <Check className=" text-green-500 size-1/4 my-0" />
         </div>

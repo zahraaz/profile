@@ -6,7 +6,7 @@ export default function Footer() {
   return (
     <footer
       className="m-0 px-4 text-center text-gray-500
-    dark:bg-gray-900 dark:text-gray-50 dark:text-opacity-90"
+      dark:bg-[#0E141B] dark:text-gray-50 dark:text-opacity-90"
     >
       <small className="flex justify-center  my-0 mx-8">
         <Link href="https://github.com/zahraaz">

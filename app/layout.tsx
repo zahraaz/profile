@@ -41,7 +41,7 @@ export default function RootLayout({
       </Head>
       <body
         className={`${inter.className} bg-sky-50 text-sky-950
-      dark:bg-gray-900 dark:text-gray-50 dark:text-opacity-90
+      dark:bg-[#0E141B] dark:text-gray-50 dark:text-opacity-90
       
       `}
       >
@@ -50,7 +50,7 @@ export default function RootLayout({
             className="bg-sky-100 absolute top-[-6rem] -z-10 right-[11rem] h-[31.25rem] 
           w-[31.25rem] rounded-full blur-[10rem] 
           sm:w-[68.75rem]
-          dark:bg-gray-900 dark:text-gray-50 dark:text-opacity-90"
+          dark:bg-[#0E141B] dark:text-gray-50 dark:text-opacity-90"
           ></div>
 
           <div
@@ -62,7 +62,7 @@ export default function RootLayout({
          lg:left-[-28rem]
          xl:left-[-20rem]
         2xl:left-[-5rem]
-        dark:bg-gray-900 dark:text-gray-50 dark:text-opacity-90
+        dark:bg-[#0E141B] dark:text-gray-50 dark:text-opacity-90
          "
           ></div>
           <ThemeSwitch />

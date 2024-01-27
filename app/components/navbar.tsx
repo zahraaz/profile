@@ -13,7 +13,7 @@ export default function Navbar() {
   return (
     <nav
       className="fixed mx-auto border bg-indigo-100 top-0 left-0 right-0 z-10 bg-opacity-100
-    dark:bg-gray-900 dark:text-gray-50 dark:text-opacity-90"
+      dark:bg-[#0E141B] dark:text-gray-50 dark:text-opacity-90"
     >
       <div className="flex flex-wrap items-center justify-between mx-auto p-3">
         <PersonalImage />

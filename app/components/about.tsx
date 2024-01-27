@@ -7,7 +7,7 @@ import work from "@/public/work.gif";
 export default function About() {
   return (
     <section
-      className="text-white dark:bg-gray-900 dark:text-gray-50 dark:text-opacity-90"
+      className="text-white dark:bg-[#0E141B] dark:text-gray-50 dark:text-opacity-90"
       id="about"
     >
       <div className="md:grid md:grid-cols-2 gap-8 items-center py-8 px-4 xl:gap-16 sm:py-16 xl:px-16">

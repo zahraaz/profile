@@ -9,7 +9,7 @@ export default function Header() {
     <section>
       <div
         className="grid grid-cols-1 lg:grid-cols-12
-      dark:bg-gray-900 dark:text-gray-50 dark:text-opacity-90"
+        dark:bg-[#0E141B] dark:text-gray-50 dark:text-opacity-90"
       >
         <div className="col-span-7 place-self-center">
           <h1

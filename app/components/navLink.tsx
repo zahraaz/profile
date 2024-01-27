@@ -11,7 +11,8 @@ const NavLink = ({ href, title }: NavLink) => {
     <Link
       href={href}
       className="block py-2 pl-3 pr-4 sm:text-xl rounded md:bg-transparent md:p-0
-      dark:bg-gray-900 dark:text-gray-50 dark:text-opacity-90"
+      dark:bg-[#0E141B] dark:text-gray-50 dark:text-opacity-90
+      "
       aria-current="page"
     >
       {title}

@@ -21,7 +21,8 @@ export default function ProjectCard({
     <>
       <div
         className="flex bg-indigo-50 shadow-lg rounded-lg 
-      hover:bg-indigo-100 hover:grow"
+      hover:bg-indigo-100 hover:grow
+      dark:bg-sky-900 dark:text-gray-50 dark:text-opacity-90"
       >
         <div className="flex items-start px-4 py-6">
           <div className="">
