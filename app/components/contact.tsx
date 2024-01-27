@@ -44,7 +44,7 @@ export default function Contact() {
   return (
     <section
       id="contact"
-      className="grid md:grid-cols-2 my-12 md:my-12 py-24 gap-4 relative
+      className="grid md:grid-cols-2 my-12 md:my-12 py-24 gap-4s
       dark:bg-[#0E141B] dark:text-gray-50 dark:text-opacity-90"
     >
       <div
