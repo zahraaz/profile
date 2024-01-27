@@ -19,60 +19,58 @@ export default function ProjectCard({
 }: ProjectCard) {
   return (
     <>
-      <div className="text-rose-800 rounded-b-xl mt-3 py-6 px-4">
-        <h5
-          className="text-xl font-semibold mb-2
-          dark:text-rose-200 dark:text-opacity-90"
-        >
-          {title}
-        </h5>
-        <p
-          className="text-[#082f49]
-        dark:text-sky-50 dark:text-opacity-90"
-        >
-          {description}
-        </p>
-        <div>
-          <ul className="flex flex-wrap mt-auto gap-2 sm:mt-auto">
-            {stack.map((tag, index) => (
-              <li
-                key={index}
-                className="bg-black/[0.7] 
-              px-3 py-1 text-[0.7rem] tracking-wider text-white rounded-full dark:text-white/70"
+      <div
+        className="flex bg-indigo-50 shadow-lg rounded-lg 
+      hover:bg-indigo-100 hover:grow"
+      >
+        <div className="flex items-start px-4 py-6">
+          <div className="">
+            <div className="flex items-center justify-between">
+              <h2
+                className="text-xl font-semibold text-sky-950 -mt-1
+              hover:text-2xl hover:text-rose-950"
               >
-                {tag}
-              </li>
-            ))}
-          </ul>
-        </div>
+                {title}{" "}
+              </h2>
+            </div>
+            <p className="mt-3 mb-5 text-gray-700 text-sm">{description}</p>
+            <div>
+              <ul className="flex flex-wrap mt-auto gap-2 sm:mt-auto">
+                {stack.map((tag, index) => (
+                  <li
+                    key={index}
+                    className="bg-black/[0.7] 
+              px-3 py-1 text-[0.7rem] tracking-wider text-white rounded-full dark:text-white/70"
+                  >
+                    {tag}
+                  </li>
+                ))}
+              </ul>
+            </div>
 
-        <div
-          className="md:grid md:grid-cols-2 gap-16 items-center py-8 px-4 xl:gap-16 sm:py-16 xl:px-16
-        "
-        >
-          <Link
-            href={previewUrl}
-            className=" text-sky-950 text-center bg-rose-300  px-6
-              inline-block py-3 w-full sm:w-fit
-              rounded-full mr-4 bg-gradient-to-br
-              from-primary-500 to-secondary-500 
-              hover:bg-slate-200 justify-center
-              dark:text-sky-50 dark:text-opacity-90"
-          >
-            Demo
-          </Link>
-          <Link
-            href={gitUrl}
-            className="text-sky-950 text-center bg-rose-300  px-6
-            inline-block py-3 w-full sm:w-fit
-            rounded-full mr-4 bg-gradient-to-br
-            from-primary-500 to-secondary-500 
-            md:
-            hover:bg-slate-200 justify-center
-            dark:text-sky-50 dark:text-opacity-90"
-          >
-            Code
-          </Link>
+            <div className="flex items-center justify-between mt-4 md:mt-6 sm:px-8 xl:px-16">
+              <Link
+                href={previewUrl}
+                className="inline-block sm:w-fit
+                items-center px-4 py-2 text-sm font-medium text-center
+                 text-white bg-rose-400 rounded-xl hover:bg-sky-800 
+                 focus:ring-4 focus:outline-none focus:ring-blue-300 
+                 dark:bg-blue-600 dark:hover:bg-sky-700 dark:focus:ring-rose-800"
+              >
+                Demo
+              </Link>
+              <Link
+                href={gitUrl}
+                className="inline-block sm:w-fit
+                items-center px-4 py-2 text-sm font-medium text-center
+                 text-white bg-rose-400 rounded-xl hover:bg-sky-800 
+                 focus:ring-4 focus:outline-none focus:ring-blue-300 
+                 dark:bg-blue-600 dark:hover:bg-sky-700 dark:focus:ring-rose-800"
+              >
+                Code
+              </Link>
+            </div>
+          </div>
         </div>
       </div>
     </>

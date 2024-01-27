@@ -59,7 +59,7 @@ export default function Projects() {
       </h2>
       <ul
         ref={ref}
-        className="grid md:grid-cols-3 gap-8 md:gap-12
+        className="grid md:grid-cols-2 gap-8 md:gap-12
       dark:bg-gray-900 dark:text-gray-50 dark:text-opacity-90"
       >
         {projectsData.map((project, index) => (
